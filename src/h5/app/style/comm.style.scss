@@ -1,0 +1,264 @@
+@import "./var.style";
+
+/* 清浮动 */
+.clearfix:after, .clear:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+body {
+	-webkit-touch-callout:none;
+	-webkit-user-select:none;
+}
+
+* {
+	::-webkit-scrollbar {/*隐藏滚轮*/
+		display: none !important;
+	}
+}
+
+/*checkbox默认样式*/
+
+input[type="checkbox"],
+input[type="radio"] {
+	width: .24rem;
+	height: .24rem;
+	vertical-align: middle;
+	margin: 0 .05rem;
+}
+
+input[type="checkbox"] {
+	position: relative;
+	width: .36rem;
+	height: .36rem;
+	z-index: 1;
+	border: 0;
+	background: 0 0;
+	-webkit-appearance: none;
+	outline: 0;
+	&:before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		content: "";
+		width: .34rem;
+		height: .34rem;
+		border: 1px solid #ccc;
+		background-color: #fff;
+	}
+	// &:checked:after {
+	// 	position: absolute;
+	// 	top: .08rem;
+	// 	left: .05rem;
+	// 	content: "";
+	// 	width: .24rem;
+	// 	height: .11rem;
+	// 	transform: rotate(-45deg);
+	// 	border-left: .02rem solid #29c944;
+	// 	border-bottom: .02rem solid #29c944;
+	// 	z-index: 5;
+	// }
+}
+
+input[type="radio"] {
+	position: relative;
+	z-index: 1;
+	border: 0;
+	background: 0 0;
+	-webkit-appearance: none;
+	outline: 0;
+	&:before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		border-radius: 50%;
+		content: "";
+		width: .24rem;
+		height: .24rem;
+		border: 1px solid #ccc;
+		background-color: #fff;
+	}
+	&:checked:after {
+		position: absolute;
+		top: 23%;
+		left: 28%;
+		border-radius: 50%;
+		content: "";
+		width: .12rem;
+		height: .12rem;
+		background-color: #29c944;
+	}
+}
+
+/*通用样式*/
+body {
+	max-width: 100%;
+	margin: 0 auto;
+	background-color: #f2f2f2;
+	color: #939393;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent
+}
+
+#root, .content, .view-enter {
+	height: 100%;
+	max-height: 100%;
+	box-sizing: border-box;
+}
+
+/*显示隐藏*/
+.hide {
+	display: none
+}
+
+.show {
+	display: block
+}
+
+/*横分割线*/
+//.line {
+//	border-bottom: $border solid 1px;
+//}
+
+/*inline cell 默认字体*/
+// 去除span，react生成大量span影响较大
+a, em, p, div, input, button {
+	font-size: .24rem;
+	color: $txtDefault;
+	word-break: break-all;
+	box-sizing: border-box;
+}
+
+/*常用字号*/
+.f-24 {
+	font-size: .24rem;
+}
+
+.f-28 {
+	font-size: .28rem;
+}
+
+.f-32 {
+	font-size: .32rem;
+}
+
+/*字号莫名变大BUG*/
+div, dt, dd, p, li, h1, h2, h3, h4, h5, h6 {
+	max-height: 100%
+}
+
+/*单行文本*/
+.txt-nowrap {
+	max-width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis
+}
+
+.txt-nowrap-multi {
+	display: -webkit-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2
+}
+
+button {
+	outline: none;
+}
+
+/*默认button样式*/
+.btn {
+	line-height: 1;
+	display: inline-block;
+	box-sizing: border-box;
+	color: #fff;
+	font-size: .24rem;
+	text-align: center;
+	border-radius: .06rem;
+	padding: .15rem;
+	border: 1px solid #ff5f4b;
+	background: #ff5f4b;
+
+	&.seal {
+		color: #ff8200;
+		background: #fff;
+	}
+	&.large {
+		font-size: .34rem;
+		border-radius: .04rem;
+		padding: .24rem;
+	}
+	&.full {
+		display: block;
+		width: 100%;
+		font-size: .34rem;
+		padding: 0;
+		border-radius: 0;
+		line-height: .88rem
+	}
+	&.disabled {
+		background: #ccc !important;
+		border: 1px solid #ccc;
+	}
+}
+
+.card {
+	border-width: 1px 0;
+	border-style: solid;
+	border-color: $border_color;
+}
+
+.error {
+	color: #E14123;
+}
+
+.primary-color {
+	color: #ff5f4b;
+}
+
+.center {
+	@include flexLayout();
+	text-align: center;
+}
+
+.label {
+	color: $label_color;
+	font-size: .24rem;
+}
+
+.capsule {
+	height: .46rem;
+	border-radius: .23rem;
+	padding: 0 .15rem 0 .05rem;
+	@include flexLayout();
+	background: rgba(#000, .6);
+	.icon:first-of-type {
+		margin-right: .1rem;
+	}
+	.icon-plus {
+		margin-left: .15rem;
+		margin-right: 0!important;
+	}
+	* {
+		color: #fff;
+		font-size: .24rem;
+	}
+}
+
+.label-btn {
+	height: .53rem;
+	font-size: .24rem;
+	padding: 0 .14rem;
+	color: #939393;
+	border: 1px solid #939393;
+	border-radius: .04rem;
+	@include flexLayout();
+	&.primary-color {
+		border: 1px solid $primary_color;
+		color: $primary_color;
+	}
+}

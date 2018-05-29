@@ -1,0 +1,45 @@
+//$icons: 定义icon名，并在$preUrl下添加对应名称的图片(正方形, 推荐16 * 16)即可
+$baseSize: .01rem;
+$baseWidth: .12rem;
+$baseHeight: .12rem;
+$min: 12;
+$max: 100;
+$preUrl: "./img/icons";
+$icons: laugh;
+
+//所有icon的公共样式，不包括background；
+@mixin baseStyle() {
+	width: $baseSize * $min;
+	height: $baseSize * $min;
+	display: inline-block;
+	//vertical-align: middle;
+	padding: 0;
+}
+
+//大小的自定义集合
+@mixin sizes($base: 1px, $max: 30, $step: 1, $min: $min) {
+	$i: $min;
+	@while $i < $max {
+		.icon-#{$i} {
+			width: $base * $i;
+			height: $base * $i;
+		}
+		$i: $i + $step;
+	}
+}
+
+//icon生成器
+@mixin icons($icons) {
+	@each $name in $icons {
+		.icon-#{$name} {
+			background: url($preUrl + "/icon-" + $name + ".png") no-repeat;
+			background-size: 100% 100%;
+			background-position: center;
+			@include baseStyle();
+		}
+	}
+}
+
+//具体实现
+@include icons($icons);
+@include sizes($baseSize, $max)

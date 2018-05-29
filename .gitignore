@@ -1,0 +1,10 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea
+node_modules/
+build
+.vscode/
+jd.html
+src/h5/.DS_Store
+src/h5/app/.DS_Store
+src/h5/assets/.DS_Store
+src/h5/assets/kk-demo/.DS_Store
