@@ -7,6 +7,7 @@ import 'isomorphic-fetch';
 import 'babel-polyfill';
 import $ from 'webpack-zepto';
 
+import '../assets/adaptive.js';
 import '../assets/c2p.js';
 // import 'swiper';
 
