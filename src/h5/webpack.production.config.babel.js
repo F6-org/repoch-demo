@@ -93,7 +93,7 @@ let config = {
                     { 
                         loader: require.resolve('postcss-loader'),
                         options: {
-                            plugins: () => [require('autoprefixer')]
+                            plugins: () => [require('precss'), require('autoprefixer')]
                         }
                     }
                 ]
