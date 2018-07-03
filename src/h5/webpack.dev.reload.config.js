@@ -9,7 +9,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const nodeModulesDir = path.resolve(__dirname, 'node_modules');
 const assetsDir = path.resolve(__dirname, 'build/h5');
-export const localDev = false;
+export const localDev = true;
 export const localIP = 'localhost'//getIPAddress();
 const jsPath = localDev ? '//' + localIP + ':3000/build/h5/' : '//js.t.sinajs.cn/c2p/purchase/wawa/h5/';
 

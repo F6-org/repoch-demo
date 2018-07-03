@@ -2,9 +2,9 @@ import React, { PropTypes } from 'react';
 
 class App extends React.Component {
 
-    static contextTypes = {
-        router: PropTypes.object.isRequired
-    };
+    // static contextTypes = {
+    //     router: PropTypes.object.isRequired
+    // };
     
     componentDidMount() {
         if (/iPhone10/.test(navigator.userAgent) && (screen.height == 812 && screen.width == 375) && window.location.href.indexOf('/game') < 0) {
@@ -26,10 +26,10 @@ class App extends React.Component {
     }
 }
 
-App.propTypes = {
-    children: React.PropTypes.node,
-    history: React.PropTypes.object,
-    location: React.PropTypes.object
-};
+// App.propTypes = {
+//     children: React.PropTypes.node,
+//     history: React.PropTypes.object,
+//     location: React.PropTypes.object
+// };
 
 export default App;
