@@ -26,27 +26,30 @@ class Building extends Component {
 	render() {
 		return (
 			<div className="v-building-root">
-                12312                <TopNav 
+                12312                
+            <TopNav 
                 menuList={ [{name:"123"}, {name:"222"}, {name:"444"}, {name: "4444"}, {name:"222"}, {name:"444"}, {name: "4444"}, {name:"222"}, {name:"444"}, {name: "4444"}, {name:"222"}, {name:"444"}, {name: "4444"}, {name:"222"}, {name:"444"}, {name: "4444"}] } 
                 selected_index={ this.state.navCurrentTitle }
                 onChangeNav={ this.handleClickTitleNav }
             />
             <NewSlider
-            continuous={ true }
-            speed={ 300 }
-            isInSlider={ this.compatSlider }
-            auto = { 6000 }
-            startSlide={ 0 }
-            slideStyles = { "lala" }
-            withDotted={ true }>
-            <img src="https://wx3.sinaimg.cn/crop.0.0.711.400/90eb2137ly1fqhs9xozoqj20jr0b4ab7.jpg"></img>
-            <img src="https://wx3.sinaimg.cn/crop.0.0.711.400/90eb2137ly1fqhs9xozoqj20jr0b4ab7.jpg"></img>
-            <img src="https://wx3.sinaimg.cn/crop.0.0.711.400/90eb2137ly1fqhs9xozoqj20jr0b4ab7.jpg"></img>
-            <img src="https://wx3.sinaimg.cn/crop.0.0.711.400/90eb2137ly1fqhs9xozoqj20jr0b4ab7.jpg"></img>
-        </NewSlider>
-        {
-            <Mask show={true}/>    
-        }            </div>
+                continuous={ true }
+                speed={ 300 }
+                isInSlider={ this.compatSlider }
+                auto = { 6000 }
+                startSlide={ 0 }
+                slideStyles = { "lala" }
+                withDotted={ true }
+            >
+                <img src="https://wx3.sinaimg.cn/crop.0.0.711.400/90eb2137ly1fqhs9xozoqj20jr0b4ab7.jpg"></img>
+                <img src="https://wx3.sinaimg.cn/crop.0.0.711.400/90eb2137ly1fqhs9xozoqj20jr0b4ab7.jpg"></img>
+                <img src="https://wx3.sinaimg.cn/crop.0.0.711.400/90eb2137ly1fqhs9xozoqj20jr0b4ab7.jpg"></img>
+                <img src="https://wx3.sinaimg.cn/crop.0.0.711.400/90eb2137ly1fqhs9xozoqj20jr0b4ab7.jpg"></img>
+            </NewSlider>
+            {
+                <Mask show={true}/>    
+            }            
+            </div>
 		)
 	}
 }

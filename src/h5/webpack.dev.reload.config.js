@@ -3,19 +3,12 @@ import webpack from 'webpack';
 import autoprefixer from 'autoprefixer';
 import precss from 'precss';
 // import getIPAddress from './app/utils/getIpAddress';
-import ExtractTextPlugin from 'extract-text-webpack-plugin'
 
 const nodeModulesDir = path.resolve(__dirname, 'node_modules');
 const assetsDir = path.resolve(__dirname, 'build/h5');
 export const localDev = true;
 export const localIP = 'localhost'//getIPAddress();
 const jsPath = localDev ? '//' + localIP + ':3000/build/h5/' : '//js.t.sinajs.cn/c2p/purchase/wawa/h5/';
-
-const extractSass = new ExtractTextPlugin({
-    filename: "[name].[contenthash].css",
-    disable: process.env.NODE_ENV === "development"
-});
-
 
 let config = {
     mode: "development",
@@ -41,9 +34,6 @@ let config = {
             Swiper: 'swiper'
         }),
     ],
-    // postcss: function() {
-    //     return [precss, autoprefixer];
-    // },
     module: {
         rules: [
             {
@@ -68,8 +58,6 @@ let config = {
                 use: ["file-loader?name=assets/[name].[ext]"]
               },
             {
-        //     test: /\.(eot|woff|woff2|ttf|svg|png|jpe?g|gif)(\?\S*)?$/,
-        //     loader: 'url?limit=100000@name=[name][ext]'                
                 test: /\.(png|jpg|gif)(\?|$)/,
                 include: path.resolve(__dirname, "src"),
                 use: ["url-loader?limit=8192&name=assets/[name].[ext]"]
