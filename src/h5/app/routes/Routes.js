@@ -10,9 +10,10 @@ import {
 
 
 import App from './App.jsx';
-import paths from '../constants/routes';
+import paths from './routePath';
 
 import Home from '../views/home/route';
+import Share from '../views/share/route';
 
 export const routes = [
 	{
@@ -28,6 +29,7 @@ export const routes = [
 		},
 		childRoutes: [
 			Home(paths),
+			Share(paths),
 		
 		]
 	}

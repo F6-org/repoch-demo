@@ -56,9 +56,9 @@ let config = {
                         ],
                         require.resolve("babel-preset-stage-0")
                     ],
-                    "plugins": [
-                        require.resolve("babel-plugin-transform-decorators-legacy"),
-                    ],
+                    // "plugins": [
+                    //     require.resolve("babel-plugin-transform-decorators-legacy"),
+                    // ],
                     // "env": {
                     //     "development": {
                     //         "plugins": [

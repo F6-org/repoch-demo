@@ -3,11 +3,9 @@ import './index.style.scss';
 import React, {Component} from 'react';
 import {Link} from 'react-router';
 // import Toast from 'wbpay-repoch/toast';
-import TopNav from 'wbpay-repoch/topNav';
 // import Popup from 'wbpay-repoch/popup';
 // import UploadPic from 'wbpay-repoch/upload';
 // import Alert from 'wbpay-repoch/alert';
-import Mask from 'wbpay-repoch/mask';
 import NewSlider from 'wbpay-repoch/slider-n';
 import {scheme, schemekk} from 'wbpay-repoch/navigation'
 
@@ -23,20 +21,7 @@ class Building extends Component {
         currentIndex: 0
     }
 
-    getPopupOptions = () => {
-        let res = {};
-        res.content = '确认取消该众筹？';
-        res.data = [{ val: 'submit', text: '确认' }];
-        res.onChoose = this.handlePopChoose;
-        res.onHide = () => {
-            this.setState({
-                showPop: false,
-                currentId: '',
-                currentIndex: 0
-            });
-        };
-        return res;
-    }
+
 
     componentDidMount = () => {
         console.log(scheme('http://www.baidu.com'))
@@ -47,14 +32,9 @@ class Building extends Component {
     }
 
 	render() {
-        let popOption = this.getPopupOptions();
 		return (
-			<div className="v-building-root">
-                <TopNav 
-                    menuList={ [{name:"123"}, {name:"222"}, {name:"444"}, {name: "4444"}, {name:"222"}, {name:"444"}, {name: "4444"}, {name:"222"}, {name:"444"}, {name: "4444"}, {name:"222"}, {name:"444"}, {name: "4444"}, {name:"222"}, {name:"444"}, {name: "4444"}] } 
-                    selected_index={ this.state.navCurrentTitle }
-                    onChangeNav={ this.handleClickTitleNav }
-                />
+			<div className="v-share-root">
+ 
                 <NewSlider
                     continuous={ true }
                     speed={ 300 }

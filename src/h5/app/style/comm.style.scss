@@ -1,4 +1,3 @@
-@import "./var.style";
 
 /* 清浮动 */
 .clearfix:after, .clear:after {
@@ -170,41 +169,6 @@ button {
 	outline: none;
 }
 
-/*默认button样式*/
-.btn {
-	line-height: 1;
-	display: inline-block;
-	box-sizing: border-box;
-	color: #fff;
-	font-size: .24rem;
-	text-align: center;
-	border-radius: .06rem;
-	padding: .15rem;
-	border: 1px solid #ff5f4b;
-	background: #ff5f4b;
-
-	&.seal {
-		color: #ff8200;
-		background: #fff;
-	}
-	&.large {
-		font-size: .34rem;
-		border-radius: .04rem;
-		padding: .24rem;
-	}
-	&.full {
-		display: block;
-		width: 100%;
-		font-size: .34rem;
-		padding: 0;
-		border-radius: 0;
-		line-height: .88rem
-	}
-	&.disabled {
-		background: #ccc !important;
-		border: 1px solid #ccc;
-	}
-}
 
 .card {
 	border-width: 1px 0;
@@ -212,13 +176,6 @@ button {
 	border-color: $border_color;
 }
 
-.error {
-	color: #E14123;
-}
-
-.primary-color {
-	color: #ff5f4b;
-}
 
 .center {
 	@include flexLayout();
@@ -246,19 +203,5 @@ button {
 	* {
 		color: #fff;
 		font-size: .24rem;
-	}
-}
-
-.label-btn {
-	height: .53rem;
-	font-size: .24rem;
-	padding: 0 .14rem;
-	color: #939393;
-	border: 1px solid #939393;
-	border-radius: .04rem;
-	@include flexLayout();
-	&.primary-color {
-		border: 1px solid $primary_color;
-		color: $primary_color;
 	}
 }

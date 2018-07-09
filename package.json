@@ -1,8 +1,8 @@
 {
   "name": "weibopay",
-  "version": "0.2.0",
+  "version": "0.0.1",
   "description": "weibopay-frontend",
-  "main": "src/pc/index.js",
+  "main": "src/index.js",
   "scripts": {
     "clean": "rm -rf ./build",
     "h5": "babel-node --presets es2015 ./src/h5/server.dev.reload.js",
@@ -58,7 +58,7 @@
     "swiper": "^3.4.0",
     "update": "^0.4.2",
     "upgrade": "^1.1.0",
-    "url-loader": "^0.5.7",
+    "url-loader": "^1.0.1",
     "wbpay-repoch": "*",
     "webpack": "^4.8.x",
     "webpack-bundle-analyzer": "^2.9.2",
